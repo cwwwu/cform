@@ -1,0 +1,22 @@
+<snippet>
+	<content><![CDATA[
+{
+	"DeviceName" : "${1}",
+	"Ebs" : {
+		"DeleteOnTermination" : ${2},
+		"Encrypted" : ${3},
+		"Iops" : ${4},
+		"SnapshotId" : ${5},
+		"VolumeSize" : ${6},
+		"VolumeType" : "${7}"
+	},
+	"NoDevice" : {},
+	"VirtualName" : "${8}"
+}
+]]>
+	</content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>block-device-mapping</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.cloudformation</scope>
+</snippet>

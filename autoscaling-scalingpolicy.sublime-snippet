@@ -1,0 +1,28 @@
+<snippet>
+    <content><![CDATA[
+"${1:-}" : {
+	"Type" : "AWS::AutoScaling::ScalingPolicy",
+	"Properties" : {
+		"AdjustmentType" : "${2:ChangeInCapacity|ExactCapacity|PercentChangeInCapacity}",
+		"AutoScalingGroupName" : "${3:--}",
+		"Cooldown" : "${4:Time[s]}",
+		"EstimatedInstanceWarmup" : ${5:Time[s]},
+		"MetricAggregationType" : "${6:Minimum|Maximum|Average}",
+		"MinAdjustmentMagnitude" : ${7:Integer},
+		"PolicyType" : "${8:SimpleScaling|StepScaling}",
+		"ScalingAdjustment" : ${9:Integer},
+		"StepAdjustments" : [
+			{
+				"MetricIntervalLowerBound" : ${10:Number},
+				"MetricIntervalUpperBound" : ${11:Number},
+				"ScalingAdjustment" : ${12:Integer}
+			}
+		]
+	}
+}
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>autoscaling-scalingpolicy</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.cloudformation</scope>
+</snippet>

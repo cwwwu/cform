@@ -1,0 +1,20 @@
+<snippet>
+    <content><![CDATA[
+"${1:-}" : {
+	"Type" : "AWS::AutoScaling::ScheduledAction",
+	"Properties" : {
+		"AutoScalingGroupName" : "${2:--}",
+		"DesiredCapacity" : ${3:1},
+		"EndTime" : ${4:--},
+		"MaxSize" : ${5:1},
+		"MinSize" : ${6:1},
+		"Recurrence" : "${7:*} ${8:*} ${9:*} ${10:*} ${11:*}",
+		"StartTime" : ${12:--}
+	}
+}
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>autoscaling-scheduledaction</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.cloudformation</scope>
+</snippet>
